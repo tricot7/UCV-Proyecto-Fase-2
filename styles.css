@@ -1,0 +1,129 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu li {
+    margin-left: 20px;
+}
+
+nav ul.menu li a {
+    color: #333;
+    font-size: 16px;
+}
+
+.carrito a {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Sección de Productos */
+main {
+    padding: 20px 0;
+}
+
+.lista-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.producto .precio {
+    font-size: 16px;
+    color: #e91e63;
+    margin: 10px 0;
+}
+
+.producto .botones {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.producto .botones button {
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto .botones button:hover {
+    background-color: #d81b60;
+}
+
+/* Sección del Carrito */
+#carrito {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.detalle-carrito {
+    margin-top: 20
+::contentReference[oaicite:0]{index=0}
