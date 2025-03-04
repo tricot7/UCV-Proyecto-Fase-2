@@ -1,87 +1,84 @@
-/* Configuración general de la página */
+/* Estilos globales */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 0;
     padding: 0;
 }
 
-/* Contenedor principal de la tienda */
-#store-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    width: 90%;
-    max-width: 1200px;
-    margin-top: 20px;
-}
-
-/* Estilo de cada producto */
-.product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-/* Imágenes de los productos */
-.product img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-}
-
-/* Contenedor de botones de compra */
-.product-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* Botones de agregar y comprar */
-button {
-    flex: 1;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-}
-
-/* Estilos específicos para el carrito de compra */
-#cart-section {
-    width: 90%;
-    max-width: 600px;
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    display: none;
-}
-
-/* Lista de productos en el carrito */
-#cart-items {
-    list-style-type: none;
-    padding: 0;
-}
-
-/* Estilos de cada ítem en el carrito */
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
+/* Encabezado */
+header {
+    padding: 20px;
     border-bottom: 1px solid #ccc;
 }
 
-/* Sección de compra directa */
-#direct-purchase-section {
-    width: 90%;
-    max-width: 600px;
-    margin-top: 20px;
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Sección de Productos */
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.producto {
+    width: 30%;
     border: 1px solid #ccc;
     padding: 10px;
-    display: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.producto h3 {
+    margin: 10px 0;
+}
+
+.producto .precio {
+    font-weight: bold;
+}
+
+.producto button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Sección del Carrito */
+.contenedor-carrito {
+    padding: 20px;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
 }
