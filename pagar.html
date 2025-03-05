@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - BinaryShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado idéntico al index.html -->
+    <header>
+        <div class="contenedor">
+            <div class="logo">
+                <h1><a href="index.html">BinaryShop</a></h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Categorías</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </nav>
+            <div class="carrito">
+                <a href="carrito.html">Carrito (<span id="cantidad-carrito">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal de pago -->
+    <main class="contenedor-pago">
+        <!-- Formulario de pago -->
+        <section class="formulario-pago">
+            <h2>Método de Pago</h2>
+            <div class="tarjeta-credito">
+                <div class="encabezado-tarjeta">
+                    <img src="img/tarjetas.png" alt="Tarjetas aceptadas" class="logos-tarjetas">
+                    <span>Tarjeta de crédito/débito</span>
+                </div>
+                <form>
+                    <input type="text" placeholder="Número de tarjeta" required>
+                    <input type="text" placeholder="Nombre en la tarjeta" required>
+                    <div class="fila">
+                        <input type="text" placeholder="MM/AA" required>
+                        <input type="text" placeholder="CVV" required>
+                    </div>
+                </form>
+            </div>
+
+            <h2 style="margin-top: 30px;">Dirección de Envío</h2>
+            <form class="formulario-direccion">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="text" placeholder="Dirección completa" required>
+                <input type="text" placeholder="Ciudad" required>
+                <div class="fila">
+                    <input type="text" placeholder="Estado" required>
+                    <input type="text" placeholder="Código postal" required>
+                </div>
+                <input type="tel" placeholder="Teléfono de contacto" required>
+            </form>
+        </section>
+
+        <!-- Resumen del pedido -->
+        <aside class="resumen-pedido">
+            <h2>Tu Pedido</h2>
+            <div class="detalles-pedido">
+                <div class="lista-productos-pago" id="lista-pago"></div>
+                <div class="total">
+                    <span>Total:</span>
+                    <span class="precio-total">$0.00</span>
+                </div>
+                <button class="btn-confirmar" type="button">Confirmar Pago</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Mismo footer que index.html -->
+    <footer>
+        <p>&copy; 2025 BinaryShop. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts necesarios -->
+    <script src="script.js"></script>
+    <script src="pagar.js"></script>
+</body>
+</html>

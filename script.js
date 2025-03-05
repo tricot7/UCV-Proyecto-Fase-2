@@ -27,3 +27,17 @@ function actualizarContadores() {
 }
 
 document.addEventListener('DOMContentLoaded', actualizarContadores);
+
+function comprarDirectamente(id, nombre, precio, imagen) {
+    // Crear carrito temporal con un solo producto
+    const carrito = [{
+        id: id,
+        nombre: nombre,
+        precio: Number(precio),
+        cantidad: 1,
+        imagen: imagen
+    }];
+    
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    window.location.href = 'pagar.html';
+}

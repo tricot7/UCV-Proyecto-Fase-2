@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
         <div class="contenedor">
             <div class="logo">
@@ -26,19 +27,21 @@
         </div>
     </header>
 
+    <!-- Contenido del Carrito -->
     <main class="contenedor-carrito">
         <h2>Tu Carrito (<span id="total-items">0</span> productos)</h2>
         <div class="contenido-carrito">
             <div class="lista-productos">
                 <div class="encabezado-carrito">
-                    <span>Producto</span>
-                    <span>Precio</span>
-                    <span>Cantidad</span>
-                    <span>Total</span>
+                    <span class="col-producto">Producto</span>
+                    <span class="col-precio">Precio</span>
+                    <span class="col-cantidad">Cantidad</span>
+                    <span class="col-total">Total</span>
                 </div>
                 <div id="items-carrito"></div>
             </div>
 
+            <!-- Sección corregida -->
             <div class="resumen-compra">
                 <div class="subtotal">
                     <span>Subtotal (<span id="total-items-carrito">0</span> productos):</span>
@@ -49,6 +52,7 @@
         </div>
     </main>
 
+    <!-- Pie de página -->
     <footer>
         <p>&copy; 2025 BinaryShop. Todos los derechos reservados.</p>
     </footer>
