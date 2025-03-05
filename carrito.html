@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - BinaryShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mismo encabezado que index.html -->
+    <header>
+        <div class="contenedor">
+            <div class="logo">
+                <h1><a href="index.html">BinaryShop</a></h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Categorías</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                </ul>
+            </nav>
+            <div class="carrito">
+                <a href="carrito.html">Carrito (<span id="cantidad-carrito">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Carrito estilo Amazon -->
+    <main class="contenedor-carrito">
+        <h2>Tu Carrito de Compras ( <span id="total-items-carrito">0</span> productos)</h2>
+        
+        <div class="contenido-carrito">
+            <!-- Lista de Productos -->
+            <div class="lista-productos">
+                <div class="encabezado-carrito">
+                    <span class="col-precio">Precio</span>
+                    <span class="col-cantidad">Cantidad</span>
+                    <span class="col-total">Total</span>
+                </div>
+                
+                <!-- Productos dinámicos -->
+                <div id="items-carrito"></div>
+            </div>
+
+            <!-- Resumen de Compra -->
+            <div class="resumen-compra">
+                <div class="subtotal">
+                    <span>Subtotal ( <span id="total-items">0</span> productos):</span>
+                    <span class="precio-subtotal">$0.00</span>
+                </div>
+                <button class="btn-pagar">Proceder al pago</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mismo footer que index.html -->
+    <footer>
+        <p>&copy; 2025 BinaryShop. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="carrito.js"></script>
+</body>
+</html>
