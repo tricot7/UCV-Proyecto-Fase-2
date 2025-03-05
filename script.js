@@ -1,7 +1,6 @@
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 function agregarAlCarrito(id, nombre, precio, imagen = 'img/placeholder.jpg') {
-    // Buscar si el producto ya está en el carrito
     const productoExistente = carrito.find(item => item.id === id);
     
     if (productoExistente) {
@@ -16,16 +15,15 @@ function agregarAlCarrito(id, nombre, precio, imagen = 'img/placeholder.jpg') {
         });
     }
     
-    // Guardar en localStorage y actualizar contadores
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    actualizarContadoresGlobales();
+    actualizarContadores();
 }
 
-// Función para actualizar contadores en todas las páginas
-function actualizarContadoresGlobales() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+function actualizarContadores() {
     const totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-    document.querySelectorAll('#cantidad-carrito').forEach(element => {
-        element.textContent = totalItems;
+    document.querySelectorAll('#cantidad-carrito').forEach(span => {
+        span.textContent = totalItems;
     });
 }
+
+document.addEventListener('DOMContentLoaded', actualizarContadores);

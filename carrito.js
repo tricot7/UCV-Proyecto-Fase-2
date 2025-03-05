@@ -1,62 +1,55 @@
-// carrito.js
 document.addEventListener('DOMContentLoaded', () => {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    const contenedorItems = document.getElementById('items-carrito');
+    const itemsCarrito = document.getElementById('items-carrito');
     
-    // Actualizar contadores
-    const actualizarContadores = () => {
-        const totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-        const subtotal = carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
-        
+    const renderCarrito = () => {
+        itemsCarrito.innerHTML = '';
+        let subtotal = 0;
+        let totalItems = 0;
+
+        carrito.forEach((item, index) => {
+            subtotal += item.precio * item.cantidad;
+            totalItems += item.cantidad;
+
+            itemsCarrito.innerHTML += `
+                <div class="item-carrito">
+                    <img src="${item.imagen}" alt="${item.nombre}">
+                    <div class="info-producto">
+                        <h3>${item.nombre}</h3>
+                        <button onclick="eliminarProducto(${index})">Eliminar</button>
+                    </div>
+                    <span>$${item.precio.toFixed(2)}</span>
+                    <input type="number" value="${item.cantidad}" min="1" 
+                           onchange="actualizarCantidad(${index}, this.value)">
+                    <span>$${(item.precio * item.cantidad).toFixed(2)}</span>
+                </div>
+            `;
+        });
+
         document.getElementById('total-items').textContent = totalItems;
         document.getElementById('total-items-carrito').textContent = totalItems;
         document.querySelector('.precio-subtotal').textContent = `$${subtotal.toFixed(2)}`;
     };
 
-    // Renderizar productos
-    const renderCarrito = () => {
-        contenedorItems.innerHTML = '';
-        
-        carrito.forEach((item, index) => {
-            const itemHTML = `
-                <div class="item-carrito">
-                    <img src="${item.imagen || 'img/placeholder.jpg'}" alt="${item.nombre}">
-                    <div class="info-producto">
-                        <h3>${item.nombre}</h3>
-                        <button class="btn-eliminar" onclick="eliminarItem(${index})">Eliminar</button>
-                    </div>
-                    <span class="precio">$${item.precio.toFixed(2)}</span>
-                    <select class="cantidad-select" data-index="${index}">
-                        ${Array.from({length: 10}, (_, i) => 
-                            `<option ${i+1 === item.cantidad ? 'selected' : ''}>${i+1}</option>`
-                        ).join('')}
-                    </select>
-                    <span class="total-item">$${(item.precio * item.cantidad).toFixed(2)}</span>
-                </div>
-            `;
-            contenedorItems.innerHTML += itemHTML;
-        });
-
-        actualizarContadores();
-    };
-
-    // Event listeners para selects de cantidad
-    document.querySelectorAll('.cantidad-select').forEach(select => {
-        select.addEventListener('change', (e) => {
-            const index = e.target.dataset.index;
-            carrito[index].cantidad = parseInt(e.target.value);
-            localStorage.setItem('carrito', JSON.stringify(carrito));
-            renderCarrito();
-        });
-    });
-
     renderCarrito();
 });
 
-// Función para eliminar items
-function eliminarItem(index) {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+function eliminarProducto(index) {
+    const carrito = JSON.parse(localStorage.getItem('carrito'));
     carrito.splice(index, 1);
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    location.reload(); // Recargar para actualizar vista
+    location.reload();
 }
+
+function actualizarCantidad(index, cantidad) {
+    const carrito = JSON.parse(localStorage.getItem('carrito'));
+    carrito[index].cantidad = parseInt(cantidad);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    location.reload();
+}
+
+document.querySelector('.btn-pagar').addEventListener('click', () => {
+    localStorage.removeItem('carrito');
+    document.querySelectorAll('#cantidad-carrito').forEach(span => span.textContent = '0');
+    window.location.href = 'index.html';
+});
