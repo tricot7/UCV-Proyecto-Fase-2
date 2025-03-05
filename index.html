@@ -11,7 +11,6 @@
     <header>
         <div class="contenedor">
             <div class="logo">
-                <!-- Aquí puedes agregar el logo de BinaryShop -->
                 <h1><a href="#">BinaryShop</a></h1>
             </div>
             <nav>
@@ -23,7 +22,7 @@
                 </ul>
             </nav>
             <div class="carrito">
-                <a href="#carrito">Carrito (<span id="cantidad-carrito">0</span>)</a>
+                <a href="carrito.html">Carrito (<span id="cantidad-carrito">0</span>)</a>
             </div>
         </div>
     </header>
@@ -31,55 +30,94 @@
     <!-- Sección de Productos -->
     <main>
         <section id="productos">
-            <div class="contenedor">
-                <h2>Productos Destacados</h2>
-                <div class="lista-productos">
-                    <!-- Producto 1 -->
-                    <div class="producto">
-                        <img src="ruta/a/imagen1.jpg" alt="Producto 1">
-                        <h3>Nombre del Producto 1</h3>
-                        <p class="precio">$100</p>
-                        <div class="botones">
-                            <button class="btn-comprar">Compra Directa</button>
-                            <button class="btn-carrito">Agregar al Carrito</button>
-                        </div>
-                    </div>
-                    <!-- Producto 2 -->
-                    <div class="producto">
-                        <img src="ruta/a/imagen2.jpg" alt="Producto 2">
-                        <h3>Nombre del Producto 2</h3>
-                        <p class="precio">$150</p>
-                        <div class="botones">
-                            <button class="btn-comprar">Compra Directa</button>
-                            <button class="btn-carrito">Agregar al Carrito</button>
-                        </div>
-                    </div>
-                    <!-- Agrega más productos según sea necesario -->
+            <h2>Productos Destacados</h2>
+            <div class="contenedor-productos">
+                <!-- Producto 1 -->
+                <div class="producto">
+                    <img src="ruta/a/imagen1.jpg" alt="Producto 1">
+                    <h3>Fuente de Alimentación 500w</h3>
+                    <p class="precio">$100</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito()">Agregar al Carrito</button>
                 </div>
-            </div>
-        </section>
-
-        <!-- Sección del Carrito -->
-        <section id="carrito">
-            <div class="contenedor">
-                <h2>Carrito de Compras</h2>
-                <div class="detalle-carrito">
-                    <p id="mensaje-carrito">Tu carrito está vacío.</p>
-                    <ul id="lista-carrito">
-                        <!-- Los productos añadidos al carrito aparecerán aquí -->
-                    </ul>
-                    <p id="total-carrito">Total: $0</p>
-                    <button id="btn-vaciar-carrito">Vaciar Carrito</button>
+                <!-- Producto 2 -->
+                <div class="producto">
+                    <img src="ruta/a/imagen2.jpg" alt="Producto 2">
+                    <h3>Nintendo Switch Lite Nuevo</h3>
+                    <p class="precio">$150</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+                </div>
+                <!-- Producto 3 -->
+                <div class="producto">
+                    <img src="ruta/a/imagen3.jpg" alt="Producto 3">
+                    <h3>Infinix Hot 50i Versión Global</h3>
+                    <p class="precio">$200</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+                </div>
+                <!-- Producto 4 -->
+                <div class="producto">
+                    <img src="ruta/a/imagen4.jpg" alt="Producto 4">
+                    <h3>Samsung A4 + Cargador Original</h3>
+                    <p class="precio">$250</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+                </div>
+                <!-- Producto 5 -->
+                <div class="producto">
+                    <img src="ruta/a/imagen5.jpg" alt="Producto 5">
+                    <h3>Auriculares Audio Technica</h3>
+                    <p class="precio">$300</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+                </div>
+                <!-- Producto 6 -->
+                <div class="producto">
+                    <img src="ruta/a/imagen6.jpg" alt="Producto 6">
+                    <h3>PS5 Versión Digital Usado</h3>
+                    <p class="precio">$350</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+                </div>
+                <!-- Producto 7 -->
+                <div class="producto">
+                    <img src="img/teclado-mecanico.jpg" alt="Teclado Mecánico RGB">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p class="precio">$120</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito(7, 'Teclado Mecánico RGB', 120)">Agregar al Carrito</button>
+                </div>
+                <!-- Producto 8 -->
+                <div class="producto">
+                    <img src="img/monitor-curvo.jpg" alt="Monitor Curvo 32''">
+                    <h3>Monitor Curvo 32 Sony''</h3>
+                    <p class="precio">$450</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito(8, 'Monitor Curvo 32', 450)">Agregar al Carrito</button>
+                </div>
+                <!-- Producto 9 -->
+                <div class="producto">
+                    <img src="img/xbox-seriesx.jpg" alt="Xbox Series X">
+                    <h3>Xbox Series X/S + Juegos</h3>
+                    <p class="precio">$550</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito(9, 'Xbox Series X', 550)">Agregar al Carrito</button>
+                </div>
+                <!-- Producto 10 -->
+                <div class="producto">
+                    <img src="img/drone-dji.jpg" alt="Drone DJI Mavic 3">
+                    <h3>Drone DJI Mavic 3 Usado</h3>
+                    <p class="precio">$1500</p>
+                    <button class="btn-comprar">Compra Directa</button>
+                    <button class="btn-carrito" onclick="agregarAlCarrito(10, 'Drone DJI Mavic 3', 1500)">Agregar al Carrito</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Pie de página -->
     <footer>
-        <div class="contenedor">
-            <p>&copy; 2025 BinaryShop. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2025 BinaryShop. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
