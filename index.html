@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Encabezado -->
-    <header>
+    <header class="esconder">
         <div class="contenedor">
             <div class="logo">
                 <h1><a href="index.html">BinaryShop</a></h1>
@@ -27,101 +28,258 @@
         </div>
     </header>
 
-    <!-- Sección de Productos -->
-    <main>
-        <section id="productos">
-            <h2>Productos Destacados</h2>
-            <div class="contenedor-productos">
-                <!-- Producto 1 -->
-                <div class="producto">
-                    <img src="img/fuente500w.jpg" alt="Fuente de Alimentación 500w">
-                    <h3>Fuente de Alimentación 500w</h3>
-                    <p class="precio">$100</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Agregar al Carrito</button>
-                </div>
+    <main id="login-section">
+        <!-- Login/Registration Section -->
+        <section>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
 
-                <!-- Producto 2 -->
-                <div class="producto">
-                    <img src="img/samsung-s21.jpg" alt="Samsung Galaxy S21 5G">
-                    <h3>Samsung Galaxy S21 5G</h3>
-                    <p class="precio">$150</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Agregar al Carrito</button>
+    <main class="esconder">
+        <section id="admin-section" class="esconder">
+            <h1>Panel de Administrador</h1>
+            <div class="admin-container">
+                <div class="admin-section">
+                    <h2>Gestión de Usuarios</h2>
+                    <div class="contenedor-usuarios" id="lista-usuarios">
+                        <!-- Usuario 1 -->
+                        <div class="usuario-card" id="usuario-1">
+                            <img src="img/user1.jpg" alt="Juan Pérez">
+                            <div class="usuario-info">
+                                <h3>Juan Pérez</h3>
+                                <p>Usuario: seller456</p>
+                                <p>Tipo: comprador</p>
+                            </div>
+                            <button class="btn-eliminar" onclick="eliminarUsuarioSimple('usuario-1')">Eliminar Usuario</button>
+                        </div>
+                        
+                        <!-- Usuario 2 -->
+                        <div class="usuario-card" id="usuario-2">
+                            <img src="img/user2.jpg" alt="Daniel Cabello">
+                            <div class="usuario-info">
+                                <h3>Daniel Cabello</h3>
+                                <p>Usuario: dancabello</p>
+                                <p>Tipo: vendedor</p>
+                            </div>
+                            <button class="btn-eliminar" onclick="eliminarUsuarioSimple('usuario-2')">Eliminar Usuario</button>
+                        </div>
+                        
+                        <!-- Usuario 3 -->
+                        <div class="usuario-card" id="usuario-3">
+                            <img src="img/user3.jpg" alt="María Gómez">
+                            <div class="usuario-info">
+                                <h3>María Gómez</h3>
+                                <p>Usuario: maria_gomez</p>
+                                <p>Tipo: comprador</p>
+                            </div>
+                            <button class="btn-eliminar" onclick="eliminarUsuarioSimple('usuario-3')">Eliminar Usuario</button>
+                        </div>
+                        
+                        <!-- Usuario 4 -->
+                        <div class="usuario-card" id="usuario-4">
+                            <img src="img/user4.jpg" alt="Carlos Rodríguez">
+                            <div class="usuario-info">
+                                <h3>Carlos Rodríguez</h3>
+                                <p>Usuario: carlos_rodriguez</p>
+                                <p>Tipo: vendedor</p>
+                            </div>
+                            <button class="btn-eliminar" onclick="eliminarUsuarioSimple('usuario-4')">Eliminar Usuario</button>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Producto 3 -->
-                <div class="producto">
-                    <img src="img/airpods-pro2.jpg" alt="AirPods Pro hasta 2 veces más cancelación activa de ruido ">
-                    <h3>Apple AirPods Pro 2</h3>
-                    <p class="precio">$200</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Agregar al Carrito</button>
-                </div>
-
-                <!-- Producto 4 -->
-                <div class="producto">
-                    <img src="img/intel-i7.jpg" alt="Intel Core i7-13700, procesador para equipos de sobremesa">
-                    <h3>Intel Core i7-14700F</h3>
-                    <p class="precio">$250</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Agregar al Carrito</button>
-                </div>
-
-                <!-- Producto 5 -->
-                <div class="producto">
-                    <img src="img/auriculares.jpg" alt="Auriculares Audio Technica">
-                    <h3>Auriculares Audio Technica</h3>
-                    <p class="precio">$300</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Agregar al Carrito</button>
-                </div>
-
-                <!-- Producto 6 -->
-                <div class="producto">
-                    <img src="img/ps5.jpg" alt="PS5 Versión Digital Usado">
-                    <h3>PS5 Versión Digital</h3>
-                    <p class="precio">$350</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Agregar al Carrito</button>
-                </div>
-
-                <!-- Producto 7 -->
-                <div class="producto">
-                    <img src="img/teclado-mecanico.jpg" alt="Teclado Mecánico RGB">
-                    <h3>Teclado Mecánico RGB</h3>
-                    <p class="precio">$120</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Agregar al Carrito</button>
-                </div>
-
-                <!-- Producto 8 -->
-                <div class="producto">
-                    <img src="img/monitor-curvo.jpg" alt="Monitor Curvo 32''">
-                    <h3>Monitor Curvo 32 Sony</h3>
-                    <p class="precio">$450</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Agregar al Carrito</button>
-                </div>
-
-                <!-- Producto 9 -->
-                <div class="producto">
-                    <img src="img/xbox-seriesx.jpg" alt="Xbox Series X">
-                    <h3>Xbox Series X/S + Juegos</h3>
-                    <p class="precio">$550</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Agregar al Carrito</button>
-                </div>
-
-                <!-- Producto 10 -->
-                <div class="producto">
-                    <img src="img/drone-dji.jpg" alt="Drone DJI Mavic 3 + accesorios">
-                    <h3>Drone DJI Mavic 3</h3>
-                    <p class="precio">$1500</p>
-                    <button class="btn-comprar" onclick="comprarDirectamente(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Compra Directa</button>
-                    <button class="btn-carrito" onclick="agregarAlCarrito(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Agregar al Carrito</button>
+                
+                <div class="admin-section">
+                    <h2>Gestión de Productos</h2>
+                    <div class="contenedor-productos" id="lista-productos-admin">
+                        <!-- Producto Admin 1 -->
+                        <div class="producto" id="admin-producto-1">
+                            <img src="img/fuente500w.jpg" alt="Fuente de Alimentación 500w">
+                            <h3>Fuente de Alimentación 500w</h3>
+                            <p class="precio">$100</p>
+                            <button class="btn-eliminar" onclick="eliminarProductoSimple('admin-producto-1')">Eliminar Producto</button>
+                        </div>
+                        
+                        <!-- Producto Admin 2 -->
+                        <div class="producto" id="admin-producto-2">
+                            <img src="img/samsung-s21.jpg" alt="Samsung Galaxy S21 5G">
+                            <h3>Samsung Galaxy S21 5G</h3>
+                            <p class="precio">$150</p>
+                            <button class="btn-eliminar" onclick="eliminarProductoSimple('admin-producto-2')">Eliminar Producto</button>
+                        </div>
+                        
+                        <!-- Producto Admin 3 -->
+                        <div class="producto" id="admin-producto-3">
+                            <img src="img/airpods-pro2.jpg" alt="AirPods Pro">
+                            <h3>Apple AirPods Pro 2</h3>
+                            <p class="precio">$200</p>
+                            <button class="btn-eliminar" onclick="eliminarProductoSimple('admin-producto-3')">Eliminar Producto</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section id="vendedor-section" class="esconder">
+            <h1>Zona vendedor</h1>
+            <div class="formulario-producto">
+                <h2>Añadir nuevo producto</h2>
+                <form id="form-producto">
+                    <div class="campo">
+                        <label for="nombre-producto">Nombre del producto:</label>
+                        <input type="text" id="nombre-producto" required>
+                    </div>
+                    <div class="campo">
+                        <label for="descripcion-producto">Descripción:</label>
+                        <textarea id="descripcion-producto" rows="3"></textarea>
+                    </div>
+                    <div class="campo">
+                        <label for="precio-producto">Precio ($):</label>
+                        <input type="number" id="precio-producto" min="0" step="0.01" required>
+                    </div>
+                    <div class="campo">
+                        <label for="imagen-producto">Imagen del producto:</label>
+                        <input type="file" id="imagen-producto" accept="image/*">
+                        <div id="preview-imagen" class="preview"></div>
+                    </div>
+                    <div class="campo">
+                        <label for="categoria-producto">Categoría:</label>
+                        <select id="categoria-producto">
+                            <option value="electronica">Electrónica</option>
+                            <option value="informatica">Informática</option>
+                            <option value="moviles">Móviles</option>
+                            <option value="audio">Audio</option>
+                            <option value="gaming">Gaming</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-publicar">Publicar producto</button>
+                </form>
+            </div>
+            
+            <div class="mis-productos">
+                <h2>Mis productos publicados</h2>
+                <div class="contenedor-productos" id="lista-productos-vendedor">
+                    <!-- Producto Vendedor 1 -->
+                    <div class="producto" id="vendedor-producto-1">
+                        <img src="img/teclado-mecanico.jpg" alt="Teclado Mecánico RGB">
+                        <h3>Teclado Mecánico RGB</h3>
+                        <p class="precio">$120</p>
+                        <p class="descripcion">Teclado mecánico con retroiluminación RGB y switches Cherry MX Blue.</p>
+                        <button class="btn-eliminar" onclick="eliminarProductoSimple('vendedor-producto-1')">Eliminar</button>
+                    </div>
+                    
+                    <!-- Producto Vendedor 2 -->
+                    <div class="producto" id="vendedor-producto-2">
+                        <img src="img/monitor-curvo.jpg" alt="Monitor Curvo 32''">
+                        <h3>Monitor Curvo 32 Sony</h3>
+                        <p class="precio">$450</p>
+                        <p class="descripcion">Monitor curvo de 32 pulgadas con resolución 4K y tiempo de respuesta de 1ms.</p>
+                        <button class="btn-eliminar" onclick="eliminarProductoSimple('vendedor-producto-2')">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="comprador-section" class="esconder">
+            <section id="productos">
+                <h2>Productos Destacados</h2>
+                <div class="contenedor-productos">
+                    <!-- Producto 1 -->
+                    <div class="producto">
+                        <img src="img/fuente500w.jpg" alt="Fuente de Alimentación 500w">
+                        <h3>Fuente de Alimentación 500w</h3>
+                        <p class="precio">$100</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Agregar al Carrito</button>
+                    </div>
+    
+                    <!-- Producto 2 -->
+                    <div class="producto">
+                        <img src="img/samsung-s21.jpg" alt="Samsung Galaxy S21 5G">
+                        <h3>Samsung Galaxy S21 5G</h3>
+                        <p class="precio">$150</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Agregar al Carrito</button>
+                    </div>
+    
+                    <!-- Producto 3 -->
+                    <div class="producto">
+                        <img src="img/airpods-pro2.jpg" alt="AirPods Pro hasta 2 veces más cancelación activa de ruido ">
+                        <h3>Apple AirPods Pro 2</h3>
+                        <p class="precio">$200</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Agregar al Carrito</button>
+                    </div>
+    
+                    <!-- Producto 4 -->
+                    <div class="producto">
+                        <img src="img/intel-i7.jpg" alt="Intel Core i7-13700, procesador para equipos de sobremesa">
+                        <h3>Intel Core i7-14700F</h3>
+                        <p class="precio">$250</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Agregar al Carrito</button>
+                    </div>
+    
+                    <!-- Producto 5 -->
+                    <div class="producto">
+                        <img src="img/auriculares.jpg" alt="Auriculares Audio Technica">
+                        <h3>Auriculares Audio Technica</h3>
+                        <p class="precio">$300</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Agregar al Carrito</button>
+                    </div>
+    
+                    <!-- Producto 6 -->
+                    <div class="producto">
+                        <img src="img/ps5.jpg" alt="PS5 Versión Digital Usado">
+                        <h3>PS5 Versión Digital</h3>
+                        <p class="precio">$350</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Agregar al Carrito</button>
+                    </div>
+    
+                    <!-- Producto 7 -->
+                    <div class="producto">
+                        <img src="img/teclado-mecanico.jpg" alt="Teclado Mecánico RGB">
+                        <h3>Teclado Mecánico RGB</h3>
+                        <p class="precio">$120</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Agregar al Carrito</button>
+                    </div>
+    
+                    <!-- Producto 8 -->
+                    <div class="producto">
+                        <img src="img/monitor-curvo.jpg" alt="Monitor Curvo 32''">
+                        <h3>Monitor Curvo 32 Sony</h3>
+                        <p class="precio">$450</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Agregar al Carrito</button>
+                    </div>
+    
+                    <!-- Producto 9 -->
+                    <div class="producto">
+                        <img src="img/xbox-seriesx.jpg" alt="Xbox Series X">
+                        <h3>Xbox Series X/S + Juegos</h3>
+                        <p class="precio">$550</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Agregar al Carrito</button>
+                    </div>
+    
+                    <!-- Producto 10 -->
+                    <div class="producto">
+                        <img src="img/drone-dji.jpg" alt="Drone DJI Mavic 3 + accesorios">
+                        <h3>Drone DJI Mavic 3</h3>
+                        <p class="precio">$1500</p>
+                        <button class="btn-comprar" onclick="comprarDirectamente(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Compra Directa</button>
+                        <button class="btn-carrito" onclick="agregarAlCarrito(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
@@ -130,5 +288,151 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+    // Usuario + Contraseña
+    const usuarios = {
+        'seller456': 'Intro123',
+        'dancabello': 'J5*asdRD.s',
+        'root': 'dochouse'
+    };
+
+    // Elementos DOM
+    const loginForm = document.getElementById('login-form');
+    const loginSection = document.getElementById('login-section');
+    const adminSection = document.getElementById('admin-section');
+    const vendedorSection = document.getElementById('vendedor-section');
+    const compradorSection = document.getElementById('comprador-section');
+    
+    // Formulario de producto
+    const formProducto = document.getElementById('form-producto');
+    const imageInput = document.getElementById('imagen-producto');
+    const imagePreview = document.getElementById('preview-imagen');
+    const listaProductosVendedor = document.getElementById('lista-productos-vendedor');
+    
+    // Contador para productos nuevos
+    let contadorProductos = 3; // Empezamos con 3 porque ya tenemos 2 productos estáticos
+
+    // Al cargar la página
+    document.addEventListener('DOMContentLoaded', () => {
+        // Mostrar vista previa de imágenes
+        if (imageInput) {
+            imageInput.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.addEventListener('load', function() {
+                        imagePreview.innerHTML = `<img src="${this.result}" alt="Vista previa">`;
+                    });
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    });
+
+    // Login form submit event
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        if (usuarios[username] && usuarios[username] === password) {
+            // Ocultar la sección de login (porfa funciona)
+            loginSection.style.display = 'none';
+            
+            document.querySelector('header.esconder').classList.remove('esconder');
+            document.querySelector('main.esconder').classList.remove('esconder');
+            
+            if (adminSection) adminSection.classList.add('esconder');
+            if (vendedorSection) vendedorSection.classList.add('esconder');
+            if (compradorSection) compradorSection.classList.add('esconder');
+            
+            if (username === 'root' && adminSection) {
+                adminSection.classList.remove('esconder');
+            } else if (username === 'dancabello' && vendedorSection) {
+                vendedorSection.classList.remove('esconder');
+            } else if (username === 'seller456' && compradorSection) {
+                compradorSection.classList.remove('esconder');
+            }
+            
+            alert('Inicio de sesión exitoso. ¡Bienvenido, ' + username + '!');
+        } else {
+            alert('Usuario o contraseña inválidos');
+        }
+    });
+    function eliminarUsuarioSimple(usuarioId) {
+        if (confirm('¿Está seguro que desea eliminar este usuario?')) {
+            const usuarioElement = document.getElementById(usuarioId);
+            if (usuarioElement) {
+                usuarioElement.style.opacity = '0';
+                setTimeout(() => {
+                    usuarioElement.remove();
+                    alert('Usuario eliminado correctamente');
+                }, 300);
+            }
+        }
+    }
+
+    function eliminarProductoSimple(productoId) {
+        if (confirm('¿Está seguro que desea eliminar este producto?')) {
+            const productoElement = document.getElementById(productoId);
+            if (productoElement) {
+                productoElement.style.opacity = '0';
+                setTimeout(() => {
+                    productoElement.remove();
+                    alert('Producto eliminado correctamente');
+                }, 300);
+            }
+        }
+    }
+
+    if (formProducto) {
+        formProducto.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Obtener valores del formulario
+            const nombre = document.getElementById('nombre-producto').value;
+            const descripcion = document.getElementById('descripcion-producto').value;
+            const precio = parseFloat(document.getElementById('precio-producto').value);
+            
+            // Obtener la imagen (como base64) o usar una por defecto
+            const imagenPreview = document.querySelector('#preview-imagen img');
+            const imagenSrc = imagenPreview ? imagenPreview.src : 'img/producto-default.jpg';
+            
+            // Incrementar el contador para crear un ID único
+            contadorProductos++;
+            
+            // Crear un nuevo elemento de producto
+            const nuevoProductoId = `vendedor-producto-${contadorProductos}`;
+            const nuevoProducto = document.createElement('div');
+            nuevoProducto.className = 'producto';
+            nuevoProducto.id = nuevoProductoId;
+            nuevoProducto.innerHTML = `
+                <img src="${imagenSrc}" alt="${nombre}">
+                <h3>${nombre}</h3>
+                <p class="precio">$${precio}</p>
+                <p class="descripcion">${descripcion}</p>
+                <button class="btn-eliminar" onclick="eliminarProductoSimple('${nuevoProductoId}')">Eliminar</button>
+            `;
+            
+            // Añadir una animación sencilla
+            nuevoProducto.style.opacity = '0';
+            
+            // Agregar el nuevo producto al DOM
+            listaProductosVendedor.appendChild(nuevoProducto);
+            
+            // Mostrar el producto con una transición suave
+            setTimeout(() => {
+                nuevoProducto.style.opacity = '1';
+            }, 10);
+            
+            // Limpiar el formulario
+            formProducto.reset();
+            imagePreview.innerHTML = '';
+            
+            alert('Producto publicado correctamente');
+        });
+    }
+    </script>
 </body>
 </html>

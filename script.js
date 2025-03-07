@@ -41,3 +41,4 @@ function comprarDirectamente(id, nombre, precio, imagen) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     window.location.href = 'pagar.html';
 }
+
