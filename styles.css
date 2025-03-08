@@ -15,6 +15,141 @@ header {
     border-bottom: 1px solid #ccc;
 }
 
+/* Estilos Matrix - Header */
+header {
+    background: #000;
+    border-bottom: 2px solid #00ff00;
+    box-shadow: 0 0 15px #00ff0077;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== HEADER MATRIX ===== */
+header {
+    background: #000000 !important;
+    border-bottom: 2px solid #00ff00;
+    padding: 15px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== EFECTO MATRIX SIMPLIFICADO ===== */
+header, footer {
+    position: relative;
+    overflow: hidden;
+}
+
+header::before, footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(transparent 50%, #00ff0033 70%, #00ff0088 90%);
+    animation: matrixFlow 4s linear infinite;
+    pointer-events: none;
+}
+
+header::before {
+    top: -100%;
+    left: 0;
+}
+
+footer::before {
+    bottom: -100%;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+@keyframes matrixFlow {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+header > *, footer > * {
+    position: relative;
+    z-index: 2;
+}
+
+footer {
+    background: #001100 !important;
+    border-top: 2px solid #00ff00;
+    color: #00ff00 !important;
+    margin-top: auto;
+    padding: 25px;
+    box-shadow: 0 -5px 20px #00ff0033;
+}
+
+.enlaces-footer {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.enlaces-footer a {
+    color: #00ff00 !important;
+    margin: 0 10px;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+}
+
+.logo h1 a {
+    color: #00ff00 !important;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 10px #00ff00;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.menu a {
+    color: #00ff00 !important;
+    font-family: 'Consolas', monospace;
+    position: relative;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #00ff0022;
+    text-shadow: 0 0 15px #00ff00;
+    transform: translateY(-2px);
+}
+
+.menu a::before {
+    content: ">";
+    position: absolute;
+    left: -15px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.menu a:hover::before {
+    opacity: 1;
+    left: -10px;
+}
+
+.carrito a {
+    color: #00ff00 !important;
+    border: 1px solid #00ff00;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-family: 'Consolas', monospace;
+}
+
+/* Estilos Matrix - Footer */
+footer {
+    background: #000;
+    border-top: 2px solid #00ff00;
+    box-shadow: 0 0 15px #00ff0077;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+footer p {
+    color: #00ff00 !important;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    text-shadow: 0 0 10px #00ff00;
+}
+
 .contenedor {
     display: flex;
     justify-content: space-between;

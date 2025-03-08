@@ -9,7 +9,7 @@
 <body>
 
     <!-- Encabezado -->
-    <header class="esconder">
+    <header>
         <div class="contenedor">
             <div class="logo">
                 <h1><a href="index.html">BinaryShop</a></h1>
@@ -285,11 +285,28 @@
 
     <footer>
         <p>&copy; 2025 BinaryShop. Todos los derechos reservados.</p>
+        <div class="enlaces-footer">
+            <a href="#">Términos de servicio</a>
+            <a href="#">Política de privacidad</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 
     <script>
+
+    // Verificar si estamos en login.html
+const esPaginaLogin = window.location.pathname.includes('login.html');
+
+if (esPaginaLogin) {
+    // Mostrar header siempre en login
+    document.querySelector('header')?.classList.remove('esconder');
+    // Ocultar secciones irrelevantes
+    [adminSection, vendedorSection, compradorSection].forEach(section => {
+        if (section) section.classList.add('esconder');
+    });
+}
+
     // Usuario + Contraseña
     const usuarios = {
         'seller456': 'Intro123',
@@ -340,8 +357,10 @@
             // Ocultar la sección de login (porfa funciona)
             loginSection.style.display = 'none';
             
-            document.querySelector('header.esconder').classList.remove('esconder');
-            document.querySelector('main.esconder').classList.remove('esconder');
+            const header = document.querySelector('header');
+            if (header) header.classList.remove('esconder');
+
+            document.querySelector('main.esconder')?.classList.remove('esconder');
             
             if (adminSection) adminSection.classList.add('esconder');
             if (vendedorSection) vendedorSection.classList.add('esconder');

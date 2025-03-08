@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-VE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BynaryShop</title>
-    <style>
-        .esconder { display: none; }
-    </style>
+    <title>BinaryShop - Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="contenedor">
+            <div class="logo">
+                <h1><a href="index.html">BinaryShop</a></h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Categorías</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </nav>
+            <div class="carrito">
+                <a href="carrito.html">Carrito (<span id="cantidad-carrito">0</span>)</a>
+            </div>
+        </div>
     </header>
-    <main>
-        <!-- Login/Registration Section -->
-        <section id="login-section">
+
+    <main id="login-section">
+        <section>
             <h2>Login</h2>
             <form id="login-form">
-                <label for="username">Username:</label>
+                <label for="username">Usuario:</label>
                 <input type="text" id="username" required>
-                <label for="password">Password:</label>
+                <label for="password">Contraseña:</label>
                 <input type="password" id="password" required>
-                <button type="submit">Login</button>
+                <button type="submit">Ingresar</button>
             </form>
         </section>
     </main>
+
     <footer>
-        <p>BynaryShop &copy; 2020</p>
+        <p>&copy; 2025 BinaryShop. Todos los derechos reservados.</p>
+        <div class="enlaces-footer">
+            <a href="#">Términos de servicio</a>
+            <a href="#">Política de privacidad</a>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
