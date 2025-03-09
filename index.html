@@ -15,14 +15,14 @@
                 <h1><a href="index.html">BinaryShop</a></h1>
             </div>
             <nav>
-                <ul class="menu">
+                <ul class="menu esconder">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="#">Categorías</a></li>
                     <li><a href="#">Ofertas</a></li>
                     <li><a href="#">Ayuda</a></li>
                 </ul>
             </nav>
-            <div class="carrito">
+            <div class="esconder carrito" id="carrito-button">
                 <a href="carrito.html">Carrito (<span id="cantidad-carrito">0</span>)</a>
             </div>
         </div>
@@ -320,6 +320,7 @@ if (esPaginaLogin) {
     const adminSection = document.getElementById('admin-section');
     const vendedorSection = document.getElementById('vendedor-section');
     const compradorSection = document.getElementById('comprador-section');
+    const carritoButton = document.getElementById('carrito-button');
     
     // Formulario de producto
     const formProducto = document.getElementById('form-producto');
@@ -359,6 +360,8 @@ if (esPaginaLogin) {
             
             const header = document.querySelector('header');
             if (header) header.classList.remove('esconder');
+
+            if (carritoButton) carritoButton.classList.remove('esconder');
 
             document.querySelector('main.esconder')?.classList.remove('esconder');
             
