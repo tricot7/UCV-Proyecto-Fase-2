@@ -6,7 +6,7 @@
     <title>BinaryShop - Tu tienda en línea</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="thefather">
 
     <!-- Encabezado -->
     <header>
@@ -28,23 +28,22 @@
         </div>
     </header>
 
-    <main id="login-section">
+    <main id="login-section" class="thefather">
         <!-- Login/Registration Section -->
         <section>
-            <h2>Login</h2>
+            <h2>Inicio de Sesión</h2>
             <form id="login-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" required>
-                <button type="submit">Login</button>
+                <label class="username-label input" for="username">Usuario:</label>
+                <input class="form-username input" type="text" id="username" required>
+                <label class="password-label input" for="password">Contraseña:</label>
+                <input type="password" class="form-password" id="password" required>
+                <button class="matrix-btn input" type="submit">Login</button>
             </form>
         </section>
     </main>
 
     <main class="esconder">
         <section id="admin-section" class="esconder">
-            <h1>Panel de Administrador</h1>
             <div class="admin-container">
                 <div class="admin-section">
                     <h2>Gestión de Usuarios</h2>
@@ -57,7 +56,7 @@
                                 <p>Usuario: seller456</p>
                                 <p>Tipo: comprador</p>
                             </div>
-                            <button class="btn-eliminar" onclick="eliminarUsuarioSimple('usuario-1')">Eliminar Usuario</button>
+                            <button class="matrix-btn" onclick="eliminarUsuarioSimple('usuario-1')">Eliminar Usuario</button>
                         </div>
                         
                         <!-- Usuario 2 -->
@@ -68,29 +67,29 @@
                                 <p>Usuario: dancabello</p>
                                 <p>Tipo: vendedor</p>
                             </div>
-                            <button class="btn-eliminar" onclick="eliminarUsuarioSimple('usuario-2')">Eliminar Usuario</button>
+                            <button class="matrix-btn" onclick="eliminarUsuarioSimple('usuario-2')">Eliminar Usuario</button>
                         </div>
                         
                         <!-- Usuario 3 -->
                         <div class="usuario-card" id="usuario-3">
-                            <img src="img/user3.jpg" alt="María Gómez">
+                            <img src="img/user1.jpg" alt="María Gómez">
                             <div class="usuario-info">
                                 <h3>María Gómez</h3>
                                 <p>Usuario: maria_gomez</p>
                                 <p>Tipo: comprador</p>
                             </div>
-                            <button class="btn-eliminar" onclick="eliminarUsuarioSimple('usuario-3')">Eliminar Usuario</button>
+                            <button class="matrix-btn" onclick="eliminarUsuarioSimple('usuario-3')">Eliminar Usuario</button>
                         </div>
                         
                         <!-- Usuario 4 -->
                         <div class="usuario-card" id="usuario-4">
-                            <img src="img/user4.jpg" alt="Carlos Rodríguez">
+                            <img src="img/user2.jpg" alt="Carlos Rodríguez">
                             <div class="usuario-info">
                                 <h3>Carlos Rodríguez</h3>
                                 <p>Usuario: carlos_rodriguez</p>
                                 <p>Tipo: vendedor</p>
                             </div>
-                            <button class="btn-eliminar" onclick="eliminarUsuarioSimple('usuario-4')">Eliminar Usuario</button>
+                            <button class="matrix-btn" onclick="eliminarUsuarioSimple('usuario-4')">Eliminar Usuario</button>
                         </div>
                     </div>
                 </div>
@@ -98,28 +97,23 @@
                 <div class="admin-section">
                     <h2>Gestión de Productos</h2>
                     <div class="contenedor-productos" id="lista-productos-admin">
-                        <!-- Producto Admin 1 -->
                         <div class="producto" id="admin-producto-1">
-                            <img src="img/fuente500w.jpg" alt="Fuente de Alimentación 500w">
+                            <img src="img/prod1.jpg" alt="Fuente de Alimentación 500w">
                             <h3>Fuente de Alimentación 500w</h3>
                             <p class="precio">$100</p>
-                            <button class="btn-eliminar" onclick="eliminarProductoSimple('admin-producto-1')">Eliminar Producto</button>
+                            <button class="matrix-btn" onclick="eliminarProductoSimple('admin-producto-1')">Eliminar Producto</button>
                         </div>
-                        
-                        <!-- Producto Admin 2 -->
                         <div class="producto" id="admin-producto-2">
-                            <img src="img/samsung-s21.jpg" alt="Samsung Galaxy S21 5G">
+                            <img src="img/prod2.jpg" alt="Samsung Galaxy S21 5G">
                             <h3>Samsung Galaxy S21 5G</h3>
                             <p class="precio">$150</p>
-                            <button class="btn-eliminar" onclick="eliminarProductoSimple('admin-producto-2')">Eliminar Producto</button>
+                            <button class="matrix-btn" onclick="eliminarProductoSimple('admin-producto-2')">Eliminar Producto</button>
                         </div>
-                        
-                        <!-- Producto Admin 3 -->
                         <div class="producto" id="admin-producto-3">
-                            <img src="img/airpods-pro2.jpg" alt="AirPods Pro">
+                            <img src="img/prod3.jpg" alt="AirPods Pro">
                             <h3>Apple AirPods Pro 2</h3>
                             <p class="precio">$200</p>
-                            <button class="btn-eliminar" onclick="eliminarProductoSimple('admin-producto-3')">Eliminar Producto</button>
+                            <button class="matrix-btn" onclick="eliminarProductoSimple('admin-producto-3')">Eliminar Producto</button>
                         </div>
                     </div>
                 </div>
@@ -127,7 +121,6 @@
         </section>
 
         <section id="vendedor-section" class="esconder">
-            <h1>Zona vendedor</h1>
             <div class="formulario-producto">
                 <h2>Añadir nuevo producto</h2>
                 <form id="form-producto">
@@ -158,7 +151,7 @@
                             <option value="gaming">Gaming</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn-publicar">Publicar producto</button>
+                    <button type="submit" class="btn-publicar matrix-btn">Publicar producto</button>
                 </form>
             </div>
             
@@ -171,7 +164,7 @@
                         <h3>Teclado Mecánico RGB</h3>
                         <p class="precio">$120</p>
                         <p class="descripcion">Teclado mecánico con retroiluminación RGB y switches Cherry MX Blue.</p>
-                        <button class="btn-eliminar" onclick="eliminarProductoSimple('vendedor-producto-1')">Eliminar</button>
+                        <button class="btn-eliminar matrix-btn" onclick="eliminarProductoSimple('vendedor-producto-1')">Eliminar</button>
                     </div>
                     
                     <!-- Producto Vendedor 2 -->
@@ -180,7 +173,7 @@
                         <h3>Monitor Curvo 32 Sony</h3>
                         <p class="precio">$450</p>
                         <p class="descripcion">Monitor curvo de 32 pulgadas con resolución 4K y tiempo de respuesta de 1ms.</p>
-                        <button class="btn-eliminar" onclick="eliminarProductoSimple('vendedor-producto-2')">Eliminar</button>
+                        <button class="btn-eliminar matrix-btn" onclick="eliminarProductoSimple('vendedor-producto-2')">Eliminar</button>
                     </div>
                 </div>
             </div>
@@ -188,32 +181,32 @@
         <section id="comprador-section" class="esconder">
             <section id="productos">
                 <h2>Productos Destacados</h2>
-                <div class="contenedor-productos">
+                <div class="contenedor-productos productos-cliente">
                     <!-- Producto 1 -->
                     <div class="producto">
-                        <img src="img/fuente500w.jpg" alt="Fuente de Alimentación 500w">
+                        <img src="img/prod1.jpg" alt="Fuente de Alimentación 500w">
                         <h3>Fuente de Alimentación 500w</h3>
                         <p class="precio">$100</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 2 -->
                     <div class="producto">
-                        <img src="img/samsung-s21.jpg" alt="Samsung Galaxy S21 5G">
+                        <img src="img/prod2.jpg" alt="Samsung Galaxy S21 5G">
                         <h3>Samsung Galaxy S21 5G</h3>
                         <p class="precio">$150</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 3 -->
                     <div class="producto">
-                        <img src="img/airpods-pro2.jpg" alt="AirPods Pro hasta 2 veces más cancelación activa de ruido ">
+                        <img src="img/prod3.jpg" alt="AirPods Pro hasta 2 veces más cancelación activa de ruido ">
                         <h3>Apple AirPods Pro 2</h3>
                         <p class="precio">$200</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 4 -->
@@ -221,8 +214,8 @@
                         <img src="img/intel-i7.jpg" alt="Intel Core i7-13700, procesador para equipos de sobremesa">
                         <h3>Intel Core i7-14700F</h3>
                         <p class="precio">$250</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 5 -->
@@ -230,8 +223,8 @@
                         <img src="img/auriculares.jpg" alt="Auriculares Audio Technica">
                         <h3>Auriculares Audio Technica</h3>
                         <p class="precio">$300</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 6 -->
@@ -239,8 +232,8 @@
                         <img src="img/ps5.jpg" alt="PS5 Versión Digital Usado">
                         <h3>PS5 Versión Digital</h3>
                         <p class="precio">$350</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 7 -->
@@ -248,8 +241,8 @@
                         <img src="img/teclado-mecanico.jpg" alt="Teclado Mecánico RGB">
                         <h3>Teclado Mecánico RGB</h3>
                         <p class="precio">$120</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 8 -->
@@ -257,8 +250,8 @@
                         <img src="img/monitor-curvo.jpg" alt="Monitor Curvo 32''">
                         <h3>Monitor Curvo 32 Sony</h3>
                         <p class="precio">$450</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 9 -->
@@ -266,8 +259,8 @@
                         <img src="img/xbox-seriesx.jpg" alt="Xbox Series X">
                         <h3>Xbox Series X/S + Juegos</h3>
                         <p class="precio">$550</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 10 -->
@@ -275,8 +268,8 @@
                         <img src="img/drone-dji.jpg" alt="Drone DJI Mavic 3 + accesorios">
                         <h3>Drone DJI Mavic 3</h3>
                         <p class="precio">$1500</p>
-                        <button class="btn-comprar" onclick="comprarDirectamente(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Compra Directa</button>
-                        <button class="btn-carrito" onclick="agregarAlCarrito(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Agregar al Carrito</button>
                     </div>
                 </div>
             </section>
