@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const listaPago = document.getElementById('lista-pago');
     const precioTotal = document.querySelector('.precio-total');
-    const btnConfirmar = document.querySelector('.btn-confirmar');
+    const btnConfirmar = document.getElementById('btn-pagar');
 
     // Mostrar productos
     let total = 0;

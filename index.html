@@ -37,7 +37,7 @@
                 <input class="form-username input" type="text" id="username" required>
                 <label class="password-label input" for="password">Contraseña:</label>
                 <input type="password" class="form-password" id="password" required>
-                <button class="matrix-btn input" type="submit">Login</button>
+                <button class="matrix-btn input" type="submit">Ingresar</button>
             </form>
         </section>
     </main>
@@ -160,7 +160,7 @@
                 <div class="contenedor-productos" id="lista-productos-vendedor">
                     <!-- Producto Vendedor 1 -->
                     <div class="producto" id="vendedor-producto-1">
-                        <img src="img/teclado-mecanico.jpg" alt="Teclado Mecánico RGB">
+                        <img src="img/rgb.jpg" alt="Teclado Mecánico RGB">
                         <h3>Teclado Mecánico RGB</h3>
                         <p class="precio">$120</p>
                         <p class="descripcion">Teclado mecánico con retroiluminación RGB y switches Cherry MX Blue.</p>
@@ -169,7 +169,7 @@
                     
                     <!-- Producto Vendedor 2 -->
                     <div class="producto" id="vendedor-producto-2">
-                        <img src="img/monitor-curvo.jpg" alt="Monitor Curvo 32''">
+                        <img src="img/tv32.jpg" alt="Monitor Curvo 32''">
                         <h3>Monitor Curvo 32 Sony</h3>
                         <p class="precio">$450</p>
                         <p class="descripcion">Monitor curvo de 32 pulgadas con resolución 4K y tiempo de respuesta de 1ms.</p>
@@ -187,8 +187,8 @@
                         <img src="img/prod1.jpg" alt="Fuente de Alimentación 500w">
                         <h3>Fuente de Alimentación 500w</h3>
                         <p class="precio">$100</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(1, 'Fuente 500w', 100, 'img/fuente500w.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(1, 'Fuente 500w', 100, 'img/prod1.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(1, 'Fuente 500w', 100, 'img/prod1.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 2 -->
@@ -196,8 +196,8 @@
                         <img src="img/prod2.jpg" alt="Samsung Galaxy S21 5G">
                         <h3>Samsung Galaxy S21 5G</h3>
                         <p class="precio">$150</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(2, 'Samsung Galaxy S21 5G', 150, 'img/samsung-s21.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(2, 'Samsung Galaxy S21 5G', 150, 'img/prod2.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(2, 'Samsung Galaxy S21 5G', 150, 'img/prod2.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 3 -->
@@ -211,7 +211,7 @@
     
                     <!-- Producto 4 -->
                     <div class="producto">
-                        <img src="img/intel-i7.jpg" alt="Intel Core i7-13700, procesador para equipos de sobremesa">
+                        <img src="img/intel7.jpg" alt="Intel Core i7-13700, procesador para equipos de sobremesa">
                         <h3>Intel Core i7-14700F</h3>
                         <p class="precio">$250</p>
                         <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Compra Directa</button>
@@ -220,7 +220,7 @@
     
                     <!-- Producto 5 -->
                     <div class="producto">
-                        <img src="img/auriculares.jpg" alt="Auriculares Audio Technica">
+                        <img src="img/headset.jpg" alt="Auriculares Audio Technica">
                         <h3>Auriculares Audio Technica</h3>
                         <p class="precio">$300</p>
                         <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Compra Directa</button>
@@ -229,7 +229,7 @@
     
                     <!-- Producto 6 -->
                     <div class="producto">
-                        <img src="img/ps5.jpg" alt="PS5 Versión Digital Usado">
+                        <img src="img/play.jpg" alt="PS5 Versión Digital Usado">
                         <h3>PS5 Versión Digital</h3>
                         <p class="precio">$350</p>
                         <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Compra Directa</button>
@@ -238,7 +238,7 @@
     
                     <!-- Producto 7 -->
                     <div class="producto">
-                        <img src="img/teclado-mecanico.jpg" alt="Teclado Mecánico RGB">
+                        <img src="img/rgb.jpg" alt="Teclado Mecánico RGB">
                         <h3>Teclado Mecánico RGB</h3>
                         <p class="precio">$120</p>
                         <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Compra Directa</button>
@@ -247,7 +247,7 @@
     
                     <!-- Producto 8 -->
                     <div class="producto">
-                        <img src="img/monitor-curvo.jpg" alt="Monitor Curvo 32''">
+                        <img src="img/tv32.jpg" alt="Monitor Curvo 32''">
                         <h3>Monitor Curvo 32 Sony</h3>
                         <p class="precio">$450</p>
                         <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Compra Directa</button>
@@ -256,20 +256,11 @@
     
                     <!-- Producto 9 -->
                     <div class="producto">
-                        <img src="img/xbox-seriesx.jpg" alt="Xbox Series X">
+                        <img src="img/xbox.jpg" alt="Xbox Series X">
                         <h3>Xbox Series X/S + Juegos</h3>
                         <p class="precio">$550</p>
                         <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Compra Directa</button>
                         <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Agregar al Carrito</button>
-                    </div>
-    
-                    <!-- Producto 10 -->
-                    <div class="producto">
-                        <img src="img/drone-dji.jpg" alt="Drone DJI Mavic 3 + accesorios">
-                        <h3>Drone DJI Mavic 3</h3>
-                        <p class="precio">$1500</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(10, 'Drone DJI Mavic 3', 1500, 'img/drone-dji.jpg')">Agregar al Carrito</button>
                     </div>
                 </div>
             </section>
@@ -278,6 +269,7 @@
 
     <footer>
         <p>&copy; 2025 BinaryShop. Todos los derechos reservados.</p>
+        <p>Desarrollado por Alejandro Colmenares (30.330.532) & Daniel Quiaro (32.080.586)</p>
         <div class="enlaces-footer">
             <a href="#">Términos de servicio</a>
             <a href="#">Política de privacidad</a>
@@ -322,7 +314,7 @@ if (esPaginaLogin) {
     const listaProductosVendedor = document.getElementById('lista-productos-vendedor');
     
     // Contador para productos nuevos
-    let contadorProductos = 3; // Empezamos con 3 porque ya tenemos 2 productos estáticos
+    let contadorProductos = 3;
 
     // Al cargar la página
     document.addEventListener('DOMContentLoaded', () => {
@@ -372,7 +364,20 @@ if (esPaginaLogin) {
             
             alert('Inicio de sesión exitoso. ¡Bienvenido, ' + username + '!');
         } else {
-            alert('Usuario o contraseña inválidos');
+            var crearCuenta = confirm('Usuario o contraseña inválidos. ¿Desea crear una cuenta?');
+            if (crearCuenta) {
+                alert('¡Cuenta creada exitosamente!');
+                loginSection.style.display = 'none';
+                const header = document.querySelector('header');
+                if (header) header.classList.remove('esconder');
+                if (carritoButton) carritoButton.classList.remove('esconder');
+                document.querySelector('main.esconder')?.classList.remove('esconder');
+                if (adminSection) adminSection.classList.add('esconder');
+                if (vendedorSection) vendedorSection.classList.add('esconder');
+                if (compradorSection) compradorSection.classList.remove('esconder');
+            } else {
+                alert('¡Hasta luego!');
+            }
         }
     });
     function eliminarUsuarioSimple(usuarioId) {

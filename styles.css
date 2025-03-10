@@ -12,6 +12,11 @@ main {
     padding: 20px;
 }
 
+h2 {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
 .matrix-btn {
     background-color: #00ff00;
     color: #000;
@@ -20,6 +25,7 @@ main {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.2rem;
+    width: 100%;
 }
 
 /* Encabezado */
@@ -283,6 +289,10 @@ footer {
     border-radius: 5px;
 }
 
+.admin-section h2 {
+    text-align: left;
+}
+
 /* Estilos para la tarjeta de usuario */
 .usuario-card {
     display: flex;
@@ -292,6 +302,10 @@ footer {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     border: 2px solid #00ff00;
+}
+
+.usuario-card .matrix-btn {
+    width: auto;
 }
 
 .usuario-card img {
@@ -317,15 +331,10 @@ footer {
 
 .btn-eliminar {
     padding: 8px 15px;
-    background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-.btn-eliminar:hover {
-    background-color: #c0392b;
 }
 
 /* Estilos para la sección del vendedor */
@@ -392,6 +401,7 @@ footer {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
+    text-align: left;
 }
 
 .contenido-carrito {
@@ -404,15 +414,42 @@ footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #00ff00;
     font-weight: bold;
 }
 
 .lista-productos {
-    background: #fff;
+    background: transparent;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #00ff00;
     border-radius: 4px;
+}
+
+.lista-productos .btn-pagar {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.lista-productos input {
+    background-color: transparent;
+    border: 2px solid #00ff00;
+    color: white;
+}
+
+.info-producto .btn-eliminar {
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
 }
 
 .item-carrito {
@@ -436,11 +473,12 @@ footer {
 }
 
 .resumen-compra {
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
+    background: transparent;
+    padding: 12px;
+    border: 1px solid #00ff00;
     border-radius: 4px;
     height: fit-content;
+    text-align: left;
 }
 
 .subtotal {
@@ -453,15 +491,9 @@ footer {
 .btn-pagar {
     width: 100%;
     padding: 10px;
-    background: #ffd814;
-    border: 1px solid #fcd200;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-}
-
-.btn-pagar:hover {
-    background: #f7ca00;
 }
 
 .btn-eliminar {
@@ -502,6 +534,7 @@ footer {
     display: flex;
     gap: 20px;
     justify-content: center;
+    text-decoration: underline;
 }
 
 .enlaces-footer a {
@@ -587,17 +620,6 @@ footer {
     object-fit: contain;
 }
 
-.btn-pagar {
-    width: 100%;
-    padding: 12px;
-    background: #ffd814;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 15px;
-}
-
 /* Footer siempre abajo */
 body {
     display: flex;
@@ -634,21 +656,19 @@ footer {
     border-bottom: 1px solid #eee;
 }
 
-.btn-pagar {
-    background: #ffd814;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    cursor: pointer;
-}
-
 /* Estilos específicos de la página de pago */
 .contenedor-pago {
+    text-align: left;
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
     display: flex;
     gap: 30px;
+    background-color: #0C0C0C;
+}
+
+.confirmar-pago {
+    margin-top: 20px;
 }
 
 .proceso-pago {
@@ -657,11 +677,12 @@ footer {
 
 .resumen-pedido {
     flex: 1;
-    background: #fff;
+    background: transparent;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 2px solid #00ff00;
     border-radius: 4px;
     height: fit-content;
+    margin-left: 20px;
 }
 
 .seccion-pago {
@@ -677,8 +698,10 @@ footer {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #00ff00;
+    background-color: #0C0C0C;
     border-radius: 4px;
+    color: white;
 }
 
 .fila {
