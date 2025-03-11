@@ -352,7 +352,20 @@ if (esPaginaLogin) {
             
             alert('Inicio de sesión exitoso. ¡Bienvenido, ' + username + '!');
         } else {
-            alert('Usuario o contraseña incorrecta. Por favor, inténtalo de nuevo.');
+            var crearCuenta = confirm('Usuario o contraseña inválidos. ¿Desea crear una cuenta?');
+            if (crearCuenta) {
+                alert('¡Cuenta creada exitosamente!');
+                loginSection.style.display = 'none';
+                const header = document.querySelector('header');
+                if (header) header.classList.remove('esconder');
+                if (carritoButton) carritoButton.classList.remove('esconder');
+                document.querySelector('main.esconder')?.classList.remove('esconder');
+                if (adminSection) adminSection.classList.add('esconder');
+                if (vendedorSection) vendedorSection.classList.add('esconder');
+                if (compradorSection) compradorSection.classList.remove('esconder');
+            } else {
+                alert('¡Hasta luego, vuelva pronto!');
+            }
         }
     });
     function eliminarUsuarioSimple(usuarioId) {
