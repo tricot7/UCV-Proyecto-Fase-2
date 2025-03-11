@@ -121,40 +121,6 @@
         </section>
 
         <section id="vendedor-section" class="esconder">
-            <div class="formulario-producto">
-                <h2>Añadir nuevo producto</h2>
-                <form id="form-producto">
-                    <div class="campo">
-                        <label for="nombre-producto">Nombre del producto:</label>
-                        <input type="text" id="nombre-producto" required>
-                    </div>
-                    <div class="campo">
-                        <label for="descripcion-producto">Descripción:</label>
-                        <textarea id="descripcion-producto" rows="3"></textarea>
-                    </div>
-                    <div class="campo">
-                        <label for="precio-producto">Precio ($):</label>
-                        <input type="number" id="precio-producto" min="0" step="0.01" required>
-                    </div>
-                    <div class="campo">
-                        <label for="imagen-producto">Imagen del producto:</label>
-                        <input type="file" id="imagen-producto" accept="image/*">
-                        <div id="preview-imagen" class="preview"></div>
-                    </div>
-                    <div class="campo">
-                        <label for="categoria-producto">Categoría:</label>
-                        <select id="categoria-producto">
-                            <option value="electronica">Electrónica</option>
-                            <option value="informatica">Informática</option>
-                            <option value="moviles">Móviles</option>
-                            <option value="audio">Audio</option>
-                            <option value="gaming">Gaming</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn-publicar matrix-btn">Publicar producto</button>
-                </form>
-            </div>
-            
             <div class="mis-productos">
                 <h2>Mis productos publicados</h2>
                 <div class="contenedor-productos" id="lista-productos-vendedor">
@@ -176,6 +142,29 @@
                         <button class="btn-eliminar matrix-btn" onclick="eliminarProductoSimple('vendedor-producto-2')">Eliminar</button>
                     </div>
                 </div>
+            </div>
+            <div class="formulario-producto">
+                <h2>Añadir nuevo producto</h2>
+                <form id="form-producto">
+                    <div class="campo">
+                        <label for="nombre-producto">Nombre del producto:</label>
+                        <input type="text" id="nombre-producto" required>
+                    </div>
+                    <div class="campo">
+                        <label for="descripcion-producto">Descripción:</label>
+                        <textarea id="descripcion-producto" rows="3"></textarea>
+                    </div>
+                    <div class="campo">
+                        <label for="precio-producto">Precio ($):</label>
+                        <input type="number" id="precio-producto" min="0" step="0.01" required>
+                    </div>
+                    <div class="campo">
+                        <label for="imagen-producto">Imagen del producto:</label>
+                        <input type="file" id="imagen-producto" accept="image/*">
+                        <div id="preview-imagen" class="preview"></div>
+                    </div>
+                    <button type="submit" class="btn-publicar matrix-btn">Publicar producto</button>
+                </form>
             </div>
         </section>
         <section id="comprador-section" class="esconder">
@@ -205,8 +194,8 @@
                         <img src="img/prod3.jpg" alt="AirPods Pro hasta 2 veces más cancelación activa de ruido ">
                         <h3>Apple AirPods Pro 2</h3>
                         <p class="precio">$200</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(3, 'AirPods Pro 2', 200, 'img/airpods-pro2.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(3, 'AirPods Pro 2', 200, 'img/prod3.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(3, 'AirPods Pro 2', 200, 'img/prod3.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 4 -->
@@ -214,8 +203,8 @@
                         <img src="img/intel7.jpg" alt="Intel Core i7-13700, procesador para equipos de sobremesa">
                         <h3>Intel Core i7-14700F</h3>
                         <p class="precio">$250</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(4, 'Intel Core i7-14700F', 250, 'img/intel-i7.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(4, 'Intel Core i7-14700F', 250, 'img/intel7.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(4, 'Intel Core i7-14700F', 250, 'img/intel7.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 5 -->
@@ -223,8 +212,8 @@
                         <img src="img/headset.jpg" alt="Auriculares Audio Technica">
                         <h3>Auriculares Audio Technica</h3>
                         <p class="precio">$300</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(5, 'Auriculares Audio Technica', 300, 'img/auriculares.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(5, 'Auriculares Audio Technica', 300, 'img/headset.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(5, 'Auriculares Audio Technica', 300, 'img/headset.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 6 -->
@@ -232,8 +221,8 @@
                         <img src="img/play.jpg" alt="PS5 Versión Digital Usado">
                         <h3>PS5 Versión Digital</h3>
                         <p class="precio">$350</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(6, 'PS5 Digital', 350, 'img/ps5.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(6, 'PS5 Digital', 350, 'img/play.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(6, 'PS5 Digital', 350, 'img/play.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 7 -->
@@ -241,8 +230,8 @@
                         <img src="img/rgb.jpg" alt="Teclado Mecánico RGB">
                         <h3>Teclado Mecánico RGB</h3>
                         <p class="precio">$120</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(7, 'Teclado Mecánico RGB', 120, 'img/teclado-mecanico.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(7, 'Teclado Mecánico RGB', 120, 'img/rgb.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(7, 'Teclado Mecánico RGB', 120, 'img/rgb.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 8 -->
@@ -250,8 +239,8 @@
                         <img src="img/tv32.jpg" alt="Monitor Curvo 32''">
                         <h3>Monitor Curvo 32 Sony</h3>
                         <p class="precio">$450</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(8, 'Monitor Curvo 32 Sony', 450, 'img/monitor-curvo.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(8, 'Monitor Curvo 32 Sony', 450, 'img/tv32.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(8, 'Monitor Curvo 32 Sony', 450, 'img/tv32.jpg')">Agregar al Carrito</button>
                     </div>
     
                     <!-- Producto 9 -->
@@ -259,8 +248,8 @@
                         <img src="img/xbox.jpg" alt="Xbox Series X">
                         <h3>Xbox Series X/S + Juegos</h3>
                         <p class="precio">$550</p>
-                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Compra Directa</button>
-                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(9, 'Xbox Series X', 550, 'img/xbox-seriesx.jpg')">Agregar al Carrito</button>
+                        <button class="btn-comprar matrix-btn" onclick="comprarDirectamente(9, 'Xbox Series X', 550, 'img/xbox.jpg')">Compra Directa</button>
+                        <button class="btn-carrito matrix-btn" onclick="agregarAlCarrito(9, 'Xbox Series X', 550, 'img/xbox.jpg')">Agregar al Carrito</button>
                     </div>
                 </div>
             </section>
@@ -346,8 +335,6 @@ if (esPaginaLogin) {
             const header = document.querySelector('header');
             if (header) header.classList.remove('esconder');
 
-            if (carritoButton) carritoButton.classList.remove('esconder');
-
             document.querySelector('main.esconder')?.classList.remove('esconder');
             
             if (adminSection) adminSection.classList.add('esconder');
@@ -360,24 +347,12 @@ if (esPaginaLogin) {
                 vendedorSection.classList.remove('esconder');
             } else if (username === 'seller456' && compradorSection) {
                 compradorSection.classList.remove('esconder');
+                if (carritoButton) carritoButton.classList.remove('esconder');
             }
             
             alert('Inicio de sesión exitoso. ¡Bienvenido, ' + username + '!');
         } else {
-            var crearCuenta = confirm('Usuario o contraseña inválidos. ¿Desea crear una cuenta?');
-            if (crearCuenta) {
-                alert('¡Cuenta creada exitosamente!');
-                loginSection.style.display = 'none';
-                const header = document.querySelector('header');
-                if (header) header.classList.remove('esconder');
-                if (carritoButton) carritoButton.classList.remove('esconder');
-                document.querySelector('main.esconder')?.classList.remove('esconder');
-                if (adminSection) adminSection.classList.add('esconder');
-                if (vendedorSection) vendedorSection.classList.add('esconder');
-                if (compradorSection) compradorSection.classList.remove('esconder');
-            } else {
-                alert('¡Hasta luego!');
-            }
+            alert('Usuario o contraseña incorrecta. Por favor, inténtalo de nuevo.');
         }
     });
     function eliminarUsuarioSimple(usuarioId) {
@@ -432,7 +407,7 @@ if (esPaginaLogin) {
                 <h3>${nombre}</h3>
                 <p class="precio">$${precio}</p>
                 <p class="descripcion">${descripcion}</p>
-                <button class="btn-eliminar" onclick="eliminarProductoSimple('${nuevoProductoId}')">Eliminar</button>
+                <button class="btn-eliminar matrix-btn" onclick="eliminarProductoSimple('${nuevoProductoId}')">Eliminar</button>
             `;
             
             // Añadir una animación sencilla

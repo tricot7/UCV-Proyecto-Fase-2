@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${item.imagen}" alt="${item.nombre}">
                     <div class="info-producto">
                         <h3>${item.nombre}</h3>
-                        <button class="btn-eliminar" onclick="eliminarProducto(${index})">Eliminar</button>
+                        <button class="btn-eliminar matrix-btn" onclick="eliminarProducto(${index})">Eliminar</button>
                     </div>
                     <span>$${item.precio.toFixed(2)}</span>
                     <input type="number" min="1" value="${item.cantidad}" 

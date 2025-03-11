@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const listaPago = document.getElementById('lista-pago');
     const precioTotal = document.querySelector('.precio-total');
     const btnConfirmar = document.getElementById('btn-pagar');
+    const formPago = document.getElementById('form-pago');
 
     // Mostrar productos
     let total = 0;
@@ -18,12 +19,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     precioTotal.textContent = `$${total.toFixed(2)}`;
+    
 
     // Confirmar compra con mensaje
     btnConfirmar.addEventListener('click', (e) => {
         e.preventDefault();
+
+        // Validar formularios
+        const inputsRequeridos = formPago.querySelectorAll('[required]');
+        let formularioValido = true;
+
+        inputsRequeridos.forEach(input => {
+            if (!input.value.trim()) {
+                formularioValido = false;
+                input.classList.add('input-error');
+            } else {
+                input.classList.remove('input-error');
+            }
+        });
+
+        if (!formularioValido) {
+            alert('Por favor, complete todos los campos requeridos.');
+            return;
+        }
         
-        // Crear mensaje flotante
         const mensajeExito = document.createElement('div');
         mensajeExito.className = 'mensaje-exito';
         mensajeExito.innerHTML = `
@@ -38,4 +57,4 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'index.html';
         }, 3000);
     });
-});
+    });
